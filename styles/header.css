@@ -1,0 +1,32 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .75rem 2rem;
+}
+.logo {
+  transition: ease 400ms;
+}
+.logo:hover {
+  transform: rotate(90deg);
+}
+.cartbutton {
+  transition: ease 500ms;
+  transition-delay: 0.2s;
+}
+.cartbutton:hover {
+  transform: rotate(-35deg);
+}
+.cart {
+  display: flex;
+  align-items: center;
+  position: relative;
+  
+
+}
+.count {
+  display: flex;
+  position: absolute;
+  top: 12px;
+  right: 33px;
+}
