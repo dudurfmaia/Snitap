@@ -17,9 +17,9 @@
   --background: #fafafa;
 
   /* *Fonts */
-  --heading1: 700 4rem/1.25 "Syne, serif";
-  --heading2: 700 2.5rem/1.2 "Syne, serif";
+  --heading1: 700 4rem/1.25 "Syne";
+  --heading2: 700 2.5rem/1.2 "Syne";
 
-  --button-label: 400 1rem/1.5 "Montserrat, serif";
-  --span: 400 0.875rem/1.5 "Montserrat, serif";
+  --button-label: 500 1rem/1.5 "Montserrat";
+  --span: 400 0.875rem/1.5 "Montserrat";
 }

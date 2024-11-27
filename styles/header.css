@@ -6,6 +6,7 @@ header {
 }
 .logo {
   transition: ease 400ms;
+  cursor: pointer;
 }
 .logo:hover {
   transform: rotate(90deg);
@@ -13,6 +14,7 @@ header {
 .cartbutton {
   transition: ease 500ms;
   transition-delay: 0.2s;
+  cursor: pointer;
 }
 .cartbutton:hover {
   transform: rotate(-35deg);
@@ -28,5 +30,6 @@ header {
   display: flex;
   position: absolute;
   top: 12px;
+  cursor: pointer;
   right: 33px;
 }
