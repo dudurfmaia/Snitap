@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     padding-block: 1.5rem;
+    gap: .5rem;
 
   }
   & h3 {
@@ -14,5 +15,15 @@
   }
   & h1 {
     font: var(--heading2)
+  }
+}
+@media (width <=79rem) {
+  & .headergl {
+    & h3 {
+      font-size: .75rem;
+    }
+    & h1 {
+      font-size: 1.5rem;
+    }
   }
 }
