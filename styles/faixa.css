@@ -1,6 +1,5 @@
 .banner {
   width: 100%;
-  border: 1px solid;
   padding-block: 2.5rem;
   overflow: hidden;
   .bg-gradient-animate {
@@ -14,7 +13,6 @@
     animation: bg-gradient 15s ease infinite;
   }
   .scroller {
-    border: 1px solid red;
     width: 100%;
     overflow: hidden;
     padding-block: 1rem;
