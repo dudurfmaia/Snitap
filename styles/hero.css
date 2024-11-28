@@ -14,7 +14,6 @@
   }
   & .patins img {
     width: 30.5rem;
-    height: 28.87rem;
     margin-top: 2.5rem;
   }
 }
@@ -112,7 +111,7 @@ button {
   }
   & h1 span {
     display: block;
-    animation: slideup 6s infinite ease;
+    animation: slideup 6s 2.5s infinite ease;
   }
   & .patins {
     display: block;
@@ -145,7 +144,7 @@ button {
     }
     & img[src*="Stars 1"] {
       max-width: 5.5rem;
-      bottom: 10%;
+      bottom: 50%;
       z-index: 0;
       opacity: 0;
       transform: translateX(400%);
@@ -154,7 +153,7 @@ button {
     & img[src*="Stars 2"] {
       max-width: 2.5rem;
       right: 0;
-      top: 10%;
+      bottom: 30%;
       z-index: 0;
       transform: translateX(400%);
       animation: slidein 2.2s 800ms ease both;
@@ -231,5 +230,136 @@ button {
   }
   100% {
     transform: translateY(-15rem);
+  }
+}
+
+@media (width <= 79rem) {
+  @keyframes slideup {
+    0%,
+    22% {
+      transform: translateY(0);
+    }
+
+    23% {
+      transform: translateY(calc(-2.5rem - 7.5px));
+    }
+    25% {
+      transform: translateY(calc(-2.5rem + 5px));
+    }
+    27% {
+      transform: translateY(calc(-2.5rem - 2.5px));
+    }
+    29% {
+      transform: translateY(calc(-2.5rem + 2.5px));
+    }
+
+    33%,
+    55% {
+      transform: translatey(-2.5rem);
+    }
+    56% {
+      transform: translateY(calc(-5rem - 7.5px));
+    }
+    58% {
+      transform: translateY(calc(-5rem + 5px));
+    }
+    60% {
+      transform: translateY(calc(-5rem - 2.5px));
+    }
+    62% {
+      transform: translateY(calc(-5rem + 2.5px));
+    }
+
+    66%,
+    88% {
+      transform: translateY(-5rem);
+    }
+    89% {
+      transform: translateY(calc(-7.5rem - 7.5px));
+    }
+    91% {
+      transform: translateY(calc(-7.5rem + 2.5px));
+    }
+    93% {
+      transform: translateY(calc(-7.5rem - 2.5px));
+    }
+    95% {
+      transform: translateY(calc(-7.5rem + 2.5px));
+    }
+    100% {
+      transform: translateY(-7.5rem);
+    }
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #hero {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    & .buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      & .buttonss {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        padding: 0px 1.5rem 1.5rem 1.5rem;
+      }
+      & h1 {
+        padding-inline: 1.5rem;
+        font-size: 2rem;
+        width: 22.5rem;
+        line-height: 125%;
+        overflow: hidden;
+        height: 5rem;
+        & span {
+          line-height: 125%;
+        }
+      }
+    }
+
+    & .patins {
+      height: 18.43rem;
+      & img {
+        margin-top: 0;
+      }
+    }
+
+    & .content img[src*="patins"] {
+      width: 19.5rem;
+      height: 18.46rem;
+      top: 10px;
+    }
+    & .content img[src*="Ellipse"] {
+      height: 18.46rem;
+      width: 18.46rem;
+    }
+    & .content img[src*="Stars 1"] {
+      width: 3.5rem;
+      height: 2.86rem;
+      bottom: 50%;
+    }
+    & .content img[src*="Stars 2"] {
+      top: 60%;
+      right: 2%;
+      width: 1.59rem;
+      height: 2.39rem;
+    }
+    & .veragora,
+    & .compraragora {
+      margin-top: 0;
+    }
+    & .veragora {
+      transform: translateX(-9%);
+    }
+    & .veragora:hover {
+      transform: scale(1.1);
+    }
   }
 }
