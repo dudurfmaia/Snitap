@@ -310,6 +310,8 @@ button {
         flex-direction: column-reverse;
         align-items: flex-start;
         padding: 0px 1.5rem 1.5rem 1.5rem;
+        margin-bottom: .5rem;
+        
       }
       & h1 {
         padding-inline: 1.5rem;
@@ -357,9 +359,11 @@ button {
     }
     & .veragora {
       transform: translateX(-9%);
+    
     }
     & .veragora:hover {
       transform: scale(1.1);
     }
+    
   }
 }
