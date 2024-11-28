@@ -1,29 +1,118 @@
 .gallery {
+  width: 100%;
+  max-width: 80rem;
+  padding: 2.5rem 2rem;
+  margin-inline: auto;
+
   & .headergl {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-block: 1.5rem;
-    gap: .5rem;
-
+    gap: 0.5rem;
   }
   & h3 {
-    font-family: 'Montserrat';
-    font-size: .875rem;
+    font-family: "Montserrat";
+    font-size: 0.875rem;
     font-weight: medium;
     line-height: 150%;
   }
   & h1 {
-    font: var(--heading2)
+    font: var(--heading2);
+  }
+  & img {
+    width: 100%;
+    height: auto;
+  }
+  & .content {
+    margin-top: 2rem;
+    display: grid;
+
+    grid-template-areas: "A B B" "C C D";
+
+    gap: 2.5rem;
+
+    & figure {
+      animation: image-appear linear backwards;
+      animation-timeline: view();
+      animation-range: 100px 350px;
+      position: relative;
+      line-height: 0;
+      border-radius: 2.5rem;
+      overflow: hidden;
+      
+      &[data-delay] {
+        animation-range: 150px 350px;
+      }
+
+      &:nth-child(1) {
+        grid-area: A;
+      }
+      &:nth-child(2) {
+        grid-area: B;
+      }
+      &:nth-child(3) {
+        grid-area: C;
+      }
+      &:nth-child(4) {
+        grid-area: D;
+      }
+      & > img {
+        height: 25rem;
+        object-fit: cover;
+        transition: scale 500ms ease;
+      }
+      &:hover {
+        & > img {
+          transform: scale(1.1);
+        }
+        & figcaption {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+  & figcaption {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+    bottom: 0;
+
+    width: 100%;
+    position: absolute;
+    padding: 1.5rem 2rem;
+
+    transform: translateY(100%);
+    transition: transform 500ms;
+
+    font: 500 0.875rem/1.5 "Montserrat";
+    color: white;
+    background: linear-gradient(to top, rgb(0 0 0 / 0.64), rgb(0 0 0 / 0));
+
+    & img {
+      width: 2rem;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 50%;
+    }
   }
 }
+
 @media (width <=79rem) {
   & .headergl {
     & h3 {
-      font-size: .75rem;
+      font-size: 0.75rem;
     }
     & h1 {
       font-size: 1.5rem;
     }
+  }
+}
+
+@keyframes image-appear {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
   }
 }
