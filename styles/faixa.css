@@ -12,6 +12,7 @@
     background-position: 0 50%;
     animation: bg-gradient 15s ease infinite;
   }
+  
   .scroller {
     width: 100%;
     overflow: hidden;
@@ -33,5 +34,11 @@
 @keyframes rolling {
   to {
     transform: translateX(-132px);
+  }
+}
+
+@media (width <= 79rem) {
+  .banner {
+    padding-block: 1.5rem;
   }
 }
